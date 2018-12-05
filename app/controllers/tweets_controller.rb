@@ -13,7 +13,11 @@ class TweetsController < ApplicationController
 
    post "/tweets" do
      redirect_if_not_logged_in
+<<<<<<< HEAD
       if params[:content] != ""
+=======
+      if params[:content] != "" 
+>>>>>>> aa53985a4628c20521e4c362a9db33d3d23d25cf
         @tweet = Tweet.create(content: params[:content], user_id: current_user.id)
         flash[:message] = "Tweet successfully created."
         redirect "/tweets/#{@tweet.id}"
