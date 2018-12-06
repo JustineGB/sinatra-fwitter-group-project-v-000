@@ -14,10 +14,18 @@ class TweetsController < ApplicationController
    post "/tweets" do
      #binding.pry
      redirect_if_not_logged_in
+<<<<<<< HEAD
       if params[:content].empty?
         flash[:message] = "Something went wrong. You cannot post an empty tweet"
         redirect '/tweets/new'
       else
+=======
+<<<<<<< HEAD
+      if params[:content] != ""
+=======
+      if params[:content] != "" 
+>>>>>>> aa53985a4628c20521e4c362a9db33d3d23d25cf
+>>>>>>> 2054b81c5b87ce295789bfc1bbb9b0a9ebb59c3b
         @tweet = Tweet.create(content: params[:content], user_id: current_user.id)
         flash[:message] = "Tweet successfully created."
         redirect "/tweets/#{@tweet.id}"

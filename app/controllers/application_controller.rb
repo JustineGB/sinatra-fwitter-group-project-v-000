@@ -20,7 +20,16 @@ class ApplicationController < Sinatra::Base
     end
 
     def current_user
+<<<<<<< HEAD
       @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]      #User.find(session[:user_id])
+=======
+<<<<<<< HEAD
+      #User.find(session[:user_id])
+      @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
+=======
+      User.find(session[:user_id])
+>>>>>>> aa53985a4628c20521e4c362a9db33d3d23d25cf
+>>>>>>> 2054b81c5b87ce295789bfc1bbb9b0a9ebb59c3b
     end
 
     def redirect_if_not_logged_in
